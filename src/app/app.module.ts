@@ -4,21 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { IntroductionComponent } from './introduction/introduction.component';
-import { IntroComponent } from './intro/intro.component';
 import { ContactComponent } from './contact/contact.component';
+import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IntroComponent,
     ContactComponent,
+    ContactDetailComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -1,0 +1,12 @@
+<div *ngIf="contact">
+    <div>
+        <h2>{{ contact.name | uppercase }} Details</h2>
+        <div><span>Prénom : </span>{{contact.firstName}}</div>
+        <div><span>Nom : </span>{{contact.name}}</div>
+        <div><span>Numéro : </span>{{contact.numero}}</div>
+        <div>
+            <label for="">Change the numero</label>
+            <input [(ngModel)]="contact.numero" placeholder="Changer le numéro" maxlength="10">
+        </div>
+    </div>
+</div>

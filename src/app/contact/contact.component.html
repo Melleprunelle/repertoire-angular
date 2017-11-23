@@ -1,28 +1,13 @@
 <section>
-    <p>{{contact.firstName}}</p>
-    <p>{{contact.name}}</p>
-</section>
-
-<section>
     <h2>Ma liste</h2>
     <article>
     <ul class="liste">
-        <li *ngFor="let contact of contacts" [class.selected]="hero === selectedContact" (click)="onSelect(contact)">
+        <li *ngFor="let contact of contacts" [class.selected]="contact === selectedContact" (click)="onSelect(contact)">
             <span class="badge">{{contact.id}}</span>
             {{contact.firstName}}
+            {{contact.name}}
         </li>
     </ul>
-    <div *ngIf="selectedContact">
-        <div>
-            <h2>{{ selectedContact.name | uppercase }} Details</h2>
-            <div><span>Prénom : </span>{{selectedContact.firstName}}</div>
-            <div><span>Nom : </span>{{selectedContact.name}}</div>
-            <div><span>Numéro : </span>{{selectedContact.numero}}</div>
-            <div>
-                <label for="">Change the numero</label>
-                <input [(ngModel)]="selectedContact.numero" placeholder="Changer le numéro" maxlength="10">
-            </div>
-        </div>
-    </div>
+    <app-contact-detail [contact]='selectedContact'></app-contact-detail>
     </article>
 </section>

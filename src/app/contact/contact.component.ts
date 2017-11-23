@@ -3,6 +3,7 @@ import { Contact } from '../contact';
 import { CONTACTS } from '../liste-contacts';
 
 
+
 @Component({
   selector: 'app-contact',
   templateUrl: 'contact.component.html',
@@ -10,11 +11,11 @@ import { CONTACTS } from '../liste-contacts';
 })
 export class ContactComponent implements OnInit {
   
-  contacts = CONTACTS;
-  selectedContact: Contact;
-  constructor() { }
+contacts = CONTACTS;
+selectedContact: Contact;
+constructor() { }
 
-  ngOnInit() {
+ngOnInit() {
   }
 
 onSelect(contact: Contact): void {
@@ -22,3 +23,5 @@ onSelect(contact: Contact): void {
 }
 
 }
+
+
