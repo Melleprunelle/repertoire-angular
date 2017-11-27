@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
+import { ContactService } from './contact.service';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,10 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
     BrowserModule,
     FormsModule
   ],
-  providers: [ ],
+  providers: [ ContactService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
+
+
+// , MessageService
